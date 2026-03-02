@@ -18,15 +18,6 @@ line-height:1.6;
 overflow-x:hidden;
 }
 
-/* Smooth fade */
-body{
-animation:fade 0.8s ease;
-}
-@keyframes fade{
-from{opacity:0; transform:translateY(10px);}
-to{opacity:1; transform:translateY(0);}
-}
-
 section{
 padding:120px 20px;
 max-width:1100px;
@@ -86,6 +77,8 @@ max-width:750px;
 margin-bottom:30px;
 }
 
+/* SKILLS GRID */
+
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -113,12 +106,51 @@ color:#ff7a00;
 margin:15px 0;
 }
 
-.big-statement{
+/* SLIDER */
+
+.slider{
+position:relative;
+overflow:hidden;
+border-radius:15px;
+margin-top:40px;
+}
+
+.slides{
+display:flex;
+transition:transform 0.5s ease;
+}
+
+.slide{
+min-width:100%;
+height:300px;
+display:flex;
+align-items:center;
+justify-content:center;
 font-size:2rem;
 font-weight:700;
-max-width:800px;
-margin:auto;
-text-align:center;
+background:#111;
+}
+
+/* AI CHAT MOCK */
+
+.chat-box{
+background:#111;
+border-radius:15px;
+padding:30px;
+margin-top:40px;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.message{
+margin-bottom:15px;
+}
+
+.user{
+color:#ff7a00;
+}
+
+.ai{
+color:#00ffcc;
 }
 
 footer{
@@ -137,80 +169,74 @@ margin-top:100px;
 <section class="hero">
 <h1>Struktur før risiko.</h1>
 <p>
-Oppstartsrådgivning for deg som vil teste ideen mot virkeligheten før du registrerer ENK eller AS.
+Oppstartsrådgivning og digitale løsninger for deg som vil bygge noe som faktisk fungerer.
 </p>
-<a href="#kontakt" class="button">Bestill vurdering</a>
+<a href="#kontakt" class="button">Start prosjekt</a>
 </section>
 
 <section>
-<h2>Dette handler ikke om motivasjon.</h2>
+<h2>Digitale løsninger</h2>
 <p class="subtle">
-Det handler om realisme, kostnadsforståelse og struktur før du binder deg juridisk eller økonomisk.
-Du får vurdering, ikke hype.
+Jeg bygger moderne nettsider, strukturerer prosjekter og kan integrere AI-løsninger.
 </p>
-</section>
-
-<section>
-<h2>Tjenester</h2>
 
 <div class="grid">
-
 <div class="card">
-<h3>Oppstartssamtale</h3>
-<div class="price">1 490 kr</div>
-<p>90 minutters strategisk gjennomgang av idé, risiko og gjennomførbarhet.</p>
+<h3>Moderne nettsider</h3>
+<p>Dark premium design, GitHub deploy, full kontroll.</p>
 </div>
 
 <div class="card">
-<h3>Strukturpakke</h3>
-<div class="price">4 900 kr</div>
-<p>Analyse av forretningsmodell, kostnader og konkret handlingsplan.</p>
+<h3>Booking & betaling</h3>
+<p>Stripe, strukturert flyt og konverteringsoptimalisering.</p>
 </div>
 
 <div class="card">
-<h3>Full oppstartsgjennomgang</h3>
-<div class="price">9 900 kr</div>
-<p>Komplett vurdering inkl. budsjett, risikovurdering og realistisk veikart.</p>
+<h3>AI-integrasjon</h3>
+<p>Chatbots, automatisering og smarte løsninger.</p>
 </div>
 
 <div class="card">
-<h3>Månedlig sparring</h3>
-<div class="price">2 500 kr / mnd</div>
-<p>For deg som allerede har startet og trenger strukturert retning videre.</p>
+<h3>Strategisk struktur</h3>
+<p>Forretningsmodell, kostnadsanalyse og realistisk plan.</p>
+</div>
 </div>
 
+<div class="slider">
+<div class="slides" id="slides">
+<div class="slide">Nettside Prosjekt 1</div>
+<div class="slide">Nettside Prosjekt 2</div>
+<div class="slide">AI Løsning</div>
 </div>
-</section>
+</div>
 
-<section>
-<h2>Hvem står bak?</h2>
-<p class="subtle">
-Jeg heter Norman Berntsen.  
-Jeg har selv vært gjennom oppstart, ENK-struktur og vurdering av AS.  
-Berntsen Struktur ble etablert for å gi gründere realistisk vurdering før registrering.
-</p>
-</section>
+<div class="chat-box">
+<div class="message user">Bruker: Kan du bygge nettside for meg?</div>
+<div class="message ai">AI: Ja. Vi starter med struktur før design.</div>
+</div>
 
-<section>
-<p class="big-statement">
-Før du bruker penger.  
-Før du registrerer selskap.  
-Før du tar risiko.  
-Få struktur.
-</p>
 </section>
 
 <section id="kontakt">
 <h2>Kontakt</h2>
 <p class="subtle">
-Send kort beskrivelse av idé og hva du ønsker vurdert til:
-<br><strong>norman1584@protonmail.com</strong>
+Send prosjektbeskrivelse til: <strong>norman1584@protonmail.com</strong>
 </p>
 </section>
 
 <footer>
 © 2026 Norman Berntsen – Berntsen Struktur
 </footer>
+
+<script>
+let index = 0;
+const slides = document.getElementById("slides");
+setInterval(()=>{
+index++;
+if(index>2) index=0;
+slides.style.transform = "translateX(-"+index*100+"%)";
+},3000);
+</script>
 
 </body>
 </html>
