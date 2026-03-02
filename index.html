@@ -3,73 +3,131 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Berntsen Struktur – Realitet før risiko</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<title>Norman Berntsen – Struktur før risiko</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
+
 body{
 font-family:'Inter', sans-serif;
-background:#0f0f0f;
+background:#0a0a0a;
 color:#f2f2f2;
 line-height:1.6;
+overflow-x:hidden;
 }
-section{padding:100px 20px;max-width:1000px;margin:auto;}
+
+/* Smooth fade */
+body{
+animation:fade 0.8s ease;
+}
+@keyframes fade{
+from{opacity:0; transform:translateY(10px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+section{
+padding:120px 20px;
+max-width:1100px;
+margin:auto;
+}
+
 .hero{
 height:100vh;
 display:flex;
 flex-direction:column;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-align:center;
+background:radial-gradient(circle at center, #141414 0%, #0a0a0a 70%);
 }
-h1{
-font-size:clamp(2.5rem,5vw,4rem);
+
+.hero h1{
+font-size:clamp(3rem,7vw,5.5rem);
+font-weight:800;
+letter-spacing:-2px;
 margin-bottom:20px;
 }
-h2{
-font-size:2rem;
-margin-bottom:20px;
+
+.hero p{
+font-size:1.3rem;
+opacity:0.7;
+max-width:650px;
+margin-bottom:40px;
 }
-p{
-opacity:0.85;
-margin-bottom:20px;
-}
+
 .button{
 display:inline-block;
-padding:14px 35px;
+padding:16px 45px;
 background:#ff7a00;
-color:white;
+color:#fff;
 text-decoration:none;
-font-weight:600;
-border-radius:6px;
+font-weight:700;
+border-radius:10px;
+transition:0.3s ease;
+box-shadow:0 0 25px rgba(255,122,0,0.25);
+}
+
+.button:hover{
+transform:translateY(-5px);
+box-shadow:0 0 40px rgba(255,122,0,0.6);
+}
+
+h2{
+font-size:2.5rem;
+margin-bottom:30px;
+font-weight:800;
+}
+
+.subtle{
+opacity:0.7;
+max-width:750px;
+margin-bottom:30px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.card{
+background:#111;
+padding:40px;
+border-radius:14px;
+border:1px solid rgba(255,255,255,0.05);
 transition:0.3s ease;
 }
-.button:hover{
-background:#ff9a3c;
-transform:translateY(-3px);
+
+.card:hover{
+border:1px solid rgba(255,122,0,0.5);
+transform:translateY(-6px);
 }
-.pricing{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-margin-top:40px;
-}
-.card{
-background:#1a1a1a;
-padding:30px;
-border-radius:10px;
-}
+
 .price{
-font-size:1.5rem;
-font-weight:700;
+font-size:1.8rem;
+font-weight:800;
+color:#ff7a00;
 margin:15px 0;
 }
+
+.big-statement{
+font-size:2rem;
+font-weight:700;
+max-width:800px;
+margin:auto;
+text-align:center;
+}
+
 footer{
 text-align:center;
-padding:50px;
-opacity:0.5;
+padding:80px 20px;
+opacity:0.4;
 font-size:0.9rem;
+border-top:1px solid rgba(255,255,255,0.05);
+margin-top:100px;
 }
 </style>
 </head>
@@ -77,71 +135,81 @@ font-size:0.9rem;
 <body>
 
 <section class="hero">
-<h1>Realitet før risiko.</h1>
-<p>Oppstartsrådgivning for gründere som vil bygge struktur før de bruker penger.</p>
-<a href="#kontakt" class="button">Bestill samtale</a>
+<h1>Struktur før risiko.</h1>
+<p>
+Oppstartsrådgivning for deg som vil teste ideen mot virkeligheten før du registrerer ENK eller AS.
+</p>
+<a href="#kontakt" class="button">Bestill vurdering</a>
 </section>
 
 <section>
-<h2>Hva vi gjør</h2>
-<p>
-Vi hjelper deg å teste ideen din mot virkeligheten før du registrerer ENK eller AS.
-Ingen hype. Ingen luftslott. Bare struktur, kostnadsforståelse og gjennomførbarhet.
+<h2>Dette handler ikke om motivasjon.</h2>
+<p class="subtle">
+Det handler om realisme, kostnadsforståelse og struktur før du binder deg juridisk eller økonomisk.
+Du får vurdering, ikke hype.
 </p>
 </section>
 
 <section>
-<h2>Tjenester og priser</h2>
+<h2>Tjenester</h2>
 
-<div class="pricing">
+<div class="grid">
 
 <div class="card">
 <h3>Oppstartssamtale</h3>
 <div class="price">1 490 kr</div>
-<p>90 minutters gjennomgang av idé, risiko, kostnader og realistisk vei videre.</p>
+<p>90 minutters strategisk gjennomgang av idé, risiko og gjennomførbarhet.</p>
 </div>
 
 <div class="card">
 <h3>Strukturpakke</h3>
 <div class="price">4 900 kr</div>
-<p>Analyse av forretningsmodell, kostnadsstruktur, NAV-forhold og konkret handlingsplan.</p>
+<p>Analyse av forretningsmodell, kostnader og konkret handlingsplan.</p>
 </div>
 
 <div class="card">
 <h3>Full oppstartsgjennomgang</h3>
 <div class="price">9 900 kr</div>
-<p>Komplett vurdering inkl. budsjett, risikovurdering og strukturert oppstartsplan.</p>
+<p>Komplett vurdering inkl. budsjett, risikovurdering og realistisk veikart.</p>
 </div>
 
 <div class="card">
 <h3>Månedlig sparring</h3>
 <div class="price">2 500 kr / mnd</div>
-<p>2 møter per måned + løpende rådgivning for deg som allerede er i gang.</p>
+<p>For deg som allerede har startet og trenger strukturert retning videre.</p>
 </div>
 
 </div>
 </section>
 
 <section>
-<h2>Hvem passer dette for?</h2>
-<p>
-For deg som vurderer ENK eller AS og vil vite hva du faktisk går inn i.
-For deg som er lei YouTube-optimisme og vil ha realisme før investering.
+<h2>Hvem står bak?</h2>
+<p class="subtle">
+Jeg heter Norman Berntsen.  
+Jeg har selv vært gjennom oppstart, ENK-struktur og vurdering av AS.  
+Berntsen Struktur ble etablert for å gi gründere realistisk vurdering før registrering.
+</p>
+</section>
+
+<section>
+<p class="big-statement">
+Før du bruker penger.  
+Før du registrerer selskap.  
+Før du tar risiko.  
+Få struktur.
 </p>
 </section>
 
 <section id="kontakt">
 <h2>Kontakt</h2>
-<p>
-Send forespørsel til: <strong>norman1584@protonmail.com</strong>
-</p>
-<p>
-Oppgi kort beskrivelse av idé og hva du ønsker hjelp med.
+<p class="subtle">
+Send kort beskrivelse av idé og hva du ønsker vurdert til:
+<br><strong>norman1584@protonmail.com</strong>
 </p>
 </section>
 
 <footer>
-© 2026 Berntsen Struktur – Enkeltpersonforetak
+© 2026 Norman Berntsen – Berntsen Struktur
 </footer>
 
 </body>
