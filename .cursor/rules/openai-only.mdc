@@ -1,0 +1,12 @@
+---
+description: Use OpenAI models only; no Claude or Anthropic. Prefer gpt-4.1 or gpt-5-mini.
+alwaysApply: true
+---
+
+# Model preference – OpenAI only
+
+- Use **OpenAI models only**. Do not use Claude or other Anthropic models.
+- Do not require an Anthropic API key.
+- Use the **OpenAI API key** configured in Cursor settings.
+- Prefer **gpt-4.1** (or **gpt-5-mini** if available).
+- If a model fails, fall back to another **OpenAI** model. Do not switch to Claude automatically.

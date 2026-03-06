@@ -1,0 +1,17 @@
+---
+description: Åpne landingssiden i Chrome etter endringer på frontend
+globs: index.html,styles.css,script.js
+alwaysApply: false
+---
+
+# Forhåndsvis landingssiden i Chrome
+
+Når du har gjort endringer i `index.html`, `styles.css` eller `script.js`, **åpne hele landingssiden i Chrome** slik at brukeren kan se resultatet.
+
+Kjør etter endringene:
+
+```bash
+start chrome "file:///c:/Users/norma/Documents/GitHub/berntsenstruktur/index.html"
+```
+
+Dette gjelder både store og små endringer på landingssiden.

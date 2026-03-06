@@ -1,0 +1,511 @@
+/* ==========================================================================
+   Berntsen Struktur – Main stylesheet
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Base
+   -------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0c0c0c;
+  color: #e8e8e8;
+  line-height: 1.7;
+}
+
+/* --------------------------------------------------------------------------
+   Layout – full-width sections, container, backgrounds & dividers
+   -------------------------------------------------------------------------- */
+section {
+  padding: 130px 0;
+  max-width: none;
+  margin: 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Soft section dividers (all sections except hero) */
+.why-fail,
+.how-it-works,
+#tjenester,
+#prosess,
+#hvem,
+#kontakt {
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* Section background levels */
+.why-fail {
+  background: #121212;
+}
+
+.how-it-works {
+  background: #0c0c0c;
+}
+
+#tjenester {
+  background: #121212;
+}
+
+#prosess {
+  background: #0c0c0c;
+}
+
+#hvem {
+  background: #121212;
+}
+
+#kontakt {
+  background: #0c0c0c;
+}
+
+/* --------------------------------------------------------------------------
+   Hero – cinematic premium (Stripe / Linear style)
+   -------------------------------------------------------------------------- */
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 8%;
+  background: #050505;
+  overflow: hidden;
+  max-width: none;
+  margin: 0;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(177, 18, 18, 0.15), transparent 60%);
+  top: -200px;
+  left: -100px;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.hero-content {
+  max-width: 650px;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroFade 1s ease forwards;
+}
+
+@keyframes heroFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 5.5vw, 64px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero .lead {
+  font-size: clamp(1.15rem, 2.2vw, 22px);
+  color: #e0e0e0;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.hero .sub {
+  font-size: 16px;
+  color: #a0a0a0;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: #e11d2e;
+  color: #fff;
+  padding: 14px 26px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background: #ff3344;
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid #e11d2e;
+  outline-offset: 3px;
+}
+
+.btn-ghost {
+  display: inline-block;
+  border: 1px solid #444;
+  color: #ccc;
+  padding: 14px 26px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-ghost:hover {
+  border-color: #777;
+  color: #e8e8e8;
+}
+
+.btn-ghost:focus-visible {
+  outline: 2px solid #666;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-content {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Why ideas fail – dark minimal, centered
+   -------------------------------------------------------------------------- */
+.why-fail {
+  text-align: center;
+}
+
+.why-fail h2 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin-bottom: 48px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.why-fail-list {
+  list-style: none;
+  max-width: 480px;
+  margin: 0 auto 40px;
+  padding: 0;
+}
+
+.why-fail-list li {
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  color: #e0e0e0;
+  padding: 16px 0;
+  border-bottom: 1px solid #1a1a1a;
+  line-height: 1.5;
+}
+
+.why-fail-list li:last-child {
+  border-bottom: none;
+}
+
+.why-fail-close {
+  font-size: clamp(1.15rem, 2.2vw, 1.35rem);
+  font-weight: 600;
+  color: #b11212;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   How it works – four steps, dark premium
+   -------------------------------------------------------------------------- */
+.how-it-works h2 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.how-it-works-lead {
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  color: #a0a0a0;
+  max-width: 560px;
+  margin-bottom: 56px;
+  line-height: 1.6;
+}
+
+.how-it-works-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .how-it-works-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .how-it-works-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.how-step {
+  background: #0d0d0d;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+  padding: 32px 28px;
+  position: relative;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.how-step:hover {
+  border-color: #2a2a2a;
+  box-shadow: 0 0 0 1px rgba(177, 18, 18, 0.08);
+}
+
+.how-step-num {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: rgba(177, 18, 18, 0.35);
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.how-step h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.how-step p {
+  font-size: 0.95rem;
+  color: #a0a0a0;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   CTAs
+   -------------------------------------------------------------------------- */
+.cta {
+  display: inline-block;
+  margin-top: 36px;
+  padding: 14px 28px;
+  background: #b11212;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.cta:hover {
+  background: #8e0e0e;
+  transform: translateY(-1px);
+}
+
+.cta:focus-visible {
+  outline: 2px solid #b11212;
+  outline-offset: 3px;
+}
+
+.cta-secondary {
+  background: transparent;
+  color: #e8e8e8;
+  border: 1px solid #333;
+}
+
+.cta-secondary:hover {
+  border-color: #b11212;
+  color: #fff;
+  background: rgba(177, 18, 18, 0.1);
+}
+
+.cta-secondary:focus-visible {
+  outline: 2px solid #b11212;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta:hover,
+  .cta-secondary:hover,
+  .card:hover {
+    transform: none;
+  }
+}
+
+.section-lead {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #c8c8c8;
+  max-width: 720px;
+  margin-bottom: 36px;
+  line-height: 1.65;
+}
+
+.contact-cta {
+  background: #171717;
+  border: 1px solid #222;
+  border-radius: 6px;
+  padding: 48px 40px;
+  text-align: center;
+  max-width: 560px;
+  margin-top: 32px;
+}
+
+.contact-cta .cta {
+  margin-top: 24px;
+}
+
+.cta-wrap {
+  margin-top: 40px;
+}
+
+.cta-wrap-inline {
+  margin-top: 24px;
+}
+
+.contact-cta .text-muted {
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Typography
+   -------------------------------------------------------------------------- */
+h2 {
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  margin-bottom: 28px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.text-muted {
+  color: #bdbdbd;
+  max-width: 700px;
+}
+
+.text-muted a {
+  color: #e8e8e8;
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+}
+
+.text-muted a:hover {
+  border-bottom-color: #b11212;
+}
+
+/* --------------------------------------------------------------------------
+   Grid & cards
+   -------------------------------------------------------------------------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.card {
+  background: #171717;
+  padding: 40px;
+  border-radius: 6px;
+  border: 1px solid #222;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.price {
+  color: #b11212;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   Utilities
+   -------------------------------------------------------------------------- */
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.04);
+  margin: 65px 0;
+}
+
+/* --------------------------------------------------------------------------
+   Skip link (a11y – visible on focus only)
+   -------------------------------------------------------------------------- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 24px;
+  z-index: 100;
+  padding: 12px 20px;
+  background: #b11212;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 24px;
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+footer {
+  padding: 60px 24px;
+  border-top: 1px solid #1f1f1f;
+  color: #888;
+  font-size: 0.9rem;
+  text-align: left;
+}
