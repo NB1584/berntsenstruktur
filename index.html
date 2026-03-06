@@ -3,214 +3,173 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Norman Berntsen – Struktur før unødvendig risiko</title>
+<title>Berntsen Struktur – Struktur før risiko</title>
+<meta name="description" content="Kom med idéen din. Ærlig oppstartsrådgivning – struktur og realitet før du registrerer ENK eller AS. Berntsen Struktur.">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
-
-body{
-font-family:'Inter', sans-serif;
-background:#0a0a0a;
-color:#f2f2f2;
-line-height:1.6;
-overflow-x:hidden;
-}
-
-/* Smooth fade */
-body{
-animation:fade 0.8s ease;
-}
-@keyframes fade{
-from{opacity:0; transform:translateY(10px);}
-to{opacity:1; transform:translateY(0);}
-}
-
-section{
-padding:120px 20px;
-max-width:1100px;
-margin:auto;
-}
-
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:radial-gradient(circle at center, #141414 0%, #0a0a0a 70%);
-}
-
-.hero h1{
-font-size:clamp(3rem,7vw,5.5rem);
-font-weight:800;
-letter-spacing:-2px;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:1.3rem;
-opacity:0.7;
-max-width:650px;
-margin-bottom:40px;
-}
-
-.button{
-display:inline-block;
-padding:16px 45px;
-background:#ff7a00;
-color:#fff;
-text-decoration:none;
-font-weight:700;
-border-radius:10px;
-transition:0.3s ease;
-box-shadow:0 0 25px rgba(255,122,0,0.25);
-}
-
-.button:hover{
-transform:translateY(-5px);
-box-shadow:0 0 40px rgba(255,122,0,0.6);
-}
-
-h2{
-font-size:2.5rem;
-margin-bottom:30px;
-font-weight:800;
-}
-
-.subtle{
-opacity:0.7;
-max-width:750px;
-margin-bottom:30px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-margin-top:50px;
-}
-
-.card{
-background:#111;
-padding:40px;
-border-radius:14px;
-border:1px solid rgba(255,255,255,0.05);
-transition:0.3s ease;
-}
-
-.card:hover{
-border:1px solid rgba(255,122,0,0.5);
-transform:translateY(-6px);
-}
-
-.price{
-font-size:1.8rem;
-font-weight:800;
-color:#ff7a00;
-margin:15px 0;
-}
-
-.big-statement{
-font-size:2rem;
-font-weight:700;
-max-width:800px;
-margin:auto;
-text-align:center;
-}
-
-footer{
-text-align:center;
-padding:80px 20px;
-opacity:0.4;
-font-size:0.9rem;
-border-top:1px solid rgba(255,255,255,0.05);
-margin-top:100px;
-}
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<section class="hero">
-<h1>Struktur før unødvendig risiko.</h1>
-<p>
-Oppstartsrådgivning for deg som vil teste ideen mot virkeligheten før du registrerer ENK eller AS.
-</p>
-<a href="#kontakt" class="button">Bestill vurdering</a>
+<a href="#hero" class="skip-link">Hopp til innhold</a>
+
+<main>
+<section id="hero" class="hero">
+  <div class="hero-content">
+    <h1>Struktur før risiko.</h1>
+
+    <p class="lead">
+    De fleste ideer dør før de starter.
+    Ikke fordi de er dårlige — men fordi ingen tester dem først.
+    </p>
+
+    <p class="sub">
+    Jeg analyserer ideen din og gir deg en ærlig vurdering
+    før du binder tid, penger eller omdømme.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#kontakt" class="btn-primary">Test ideen min</a>
+      <a href="#hvordan" class="btn-ghost">Se hvordan det fungerer</a>
+    </div>
+  </div>
 </section>
 
-<section>
-<h2>Dette handler ikke om motivasjon.</h2>
-<p class="subtle">
-Det handler om realisme, kostnadsforståelse og struktur før du binder deg juridisk eller økonomisk.
-Du får vurdering, ikke hype.
-</p>
+<section id="hvorfor-feiler" class="why-fail">
+  <div class="container">
+    <h2>Hvorfor de fleste ideer feiler</h2>
+    <ul class="why-fail-list">
+      <li>De starter med selskap før marked</li>
+      <li>De bruker penger før de tester</li>
+      <li>De bygger produkt før problem</li>
+    </ul>
+    <p class="why-fail-close">Min jobb er å stoppe deg før du gjør disse feilene.</p>
+  </div>
 </section>
 
-<section>
+<section id="hvordan" class="how-it-works">
+  <div class="container">
+    <h2>Slik fungerer det</h2>
+    <p class="how-it-works-lead">En enkel prosess for å teste ideen din før du investerer tid eller penger.</p>
+    <div class="how-it-works-grid">
+    <article class="how-step">
+      <span class="how-step-num" aria-hidden="true">01</span>
+      <h3>Send ideen din</h3>
+      <p>Beskriv ideen kort og hva du ønsker å oppnå.</p>
+    </article>
+    <article class="how-step">
+      <span class="how-step-num" aria-hidden="true">02</span>
+      <h3>Analyse</h3>
+      <p>Jeg vurderer markedet, risikoen og hvor ideen kan feile.</p>
+    </article>
+    <article class="how-step">
+      <span class="how-step-num" aria-hidden="true">03</span>
+      <h3>Reality check</h3>
+      <p>Du får en ærlig vurdering av styrker, svakheter og potensial.</p>
+    </article>
+    <article class="how-step">
+      <span class="how-step-num" aria-hidden="true">04</span>
+      <h3>Neste steg</h3>
+      <p>Enten forbedrer vi ideen — eller du sparer tid og penger ved å stoppe.</p>
+    </article>
+  </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="tjenester">
+  <div class="container">
 <h2>Tjenester</h2>
+<p class="section-lead">Konkrete tilbud for ulike behov – fra første vurdering til løpende rådgivning.</p>
 
 <div class="grid">
 
 <div class="card">
-<h3>Oppstartssamtale</h3>
-<div class="price">1 490 kr</div>
-<p>90 minutters strategisk gjennomgang av idé, risiko og gjennomførbarhet.</p>
+<h3>Oppstartsgjennomgang</h3>
+<p>Strategisk vurdering av idé, risiko og gjennomførbarhet.</p>
+<p class="price">Fra 1 490 kr</p>
 </div>
 
 <div class="card">
 <h3>Strukturpakke</h3>
-<div class="price">4 900 kr</div>
-<p>Analyse av forretningsmodell, kostnader og konkret handlingsplan.</p>
+<p>Analyse av forretningsmodell og konkret handlingsplan.</p>
+<p class="price">Fra 4 900 kr</p>
 </div>
 
 <div class="card">
-<h3>Full oppstartsgjennomgang</h3>
-<div class="price">9 900 kr</div>
-<p>Komplett vurdering inkl. budsjett, risikovurdering og realistisk veikart.</p>
-</div>
-
-<div class="card">
-<h3>Månedlig sparring</h3>
-<div class="price">2 500 kr / mnd</div>
-<p>For deg som allerede har startet og trenger strukturert retning videre.</p>
+<h3>Videre rådgivning</h3>
+<p>For deg som allerede er i gang og trenger retning.</p>
+<p class="price">Etter avtale</p>
 </div>
 
 </div>
+<p class="cta-wrap"><a href="#kontakt" class="cta cta-secondary">Kom med idéen – start med en gjennomgang</a></p>
+  </div>
 </section>
 
-<section>
-<h2>Hvem står bak?</h2>
-<p class="subtle">
-Jeg heter Norman Berntsen.  
-Jeg har selv vært gjennom oppstart, ENK-struktur og vurdering av AS.  
-Berntsen Struktur ble etablert for å gi gründere realistisk vurdering før registrering.
+<div class="divider"></div>
+
+<section id="prosess">
+  <div class="container">
+<h2>Slik jobber jeg</h2>
+<p class="section-lead">Idéen din fortjener noen som tar den på alvor. Jeg gjør det.</p>
+<p class="text-muted">
+Første samtale brukes til å forstå hva du vil bygge og om det finnes en realistisk vei. Hvis ja – vi lager en plan. Hvis nei – du får et ærlig svar, så du ikke bruker tid og penger på noe som ikke holder. Jeg tar ikke oppdrag jeg ikke mener kan fungere, og jeg sier fra når noe kan.
 </p>
+  </div>
 </section>
 
-<section>
-<p class="big-statement">
-Før du bruker penger.  
-Før du registrerer selskap.  
-Før du tar risiko.  
-Få struktur.
+<div class="divider"></div>
+
+<section id="hvem">
+  <div class="container">
+<h2>Hvem passer dette for?</h2>
+<p class="section-lead">For deg som har en idé og vil at noen skal ta den på alvor – før du registrerer ENK eller AS.</p>
+<p class="text-muted">
+Du vil vite hva du faktisk går inn i: Hva koster det? Hva binder du deg til? Hvem er markedet? Her får du realitet før du binder deg. Ikke alle ideer trenger logo først – de trenger noen som ser muligheten og strukturen.
 </p>
+<a href="#kontakt" class="cta cta-secondary cta-wrap-inline">Fortell meg om idéen din</a>
+  </div>
 </section>
+
+<div class="divider"></div>
 
 <section id="kontakt">
+  <div class="container">
 <h2>Kontakt</h2>
-<p class="subtle">
-Send kort beskrivelse av idé og hva du ønsker vurdert til:
-<br><strong>norman1584@protonmail.com</strong>
-</p>
+<p class="section-lead">Fortell kort om idéen eller situasjonen din. Jeg svarer og vi ser om vi skal ta neste steg.</p>
+
+<form action="https://formspree.io/f/mzdjbypk" method="POST" class="contact-form">
+  <label for="name">Navn</label>
+  <input type="text" name="name" id="name" placeholder="Navn" required>
+
+  <label for="email">E-post</label>
+  <input type="email" name="email" id="email" placeholder="E-post" required>
+
+  <label for="message">Melding</label>
+  <textarea name="message" id="message" placeholder="Melding" rows="5" required></textarea>
+
+  <input type="hidden" name="_subject" value="Ny forespørsel fra jaerenmultiservice.no">
+
+  <!-- spam protection -->
+  <input type="text" name="_gotcha" style="display:none">
+
+  <button type="submit" class="btn-primary">SEND MELDING</button>
+</form>
+  </div>
 </section>
+</main>
 
 <footer>
-© 2026 Norman Berntsen – Berntsen Struktur
+© 2026 Berntsen Struktur  
+Gjennomtenkt før gjennomføring.
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
+
